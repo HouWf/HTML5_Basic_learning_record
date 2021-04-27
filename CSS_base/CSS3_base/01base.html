@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            border: 15px solid transparent;
+            width: 250px;
+            padding: 10px 20px;
+        }
+
+        #round {
+            /* border: 15px solid transparent; */
+            border-image: url('https://www.runoob.com/try/demo_source/border.png') 30 30 round;
+            -webkit-border-image: url('https://www.runoob.com/try/demo_source/border.png') 30 30 round;
+            -o-border-image: url('https://www.runoob.com/try/demo_source/border.png') 30 30 round;
+        }
+
+        #stretch {
+            /* border: 15px solid transparent; */
+            border-image: url('https://www.runoob.com/try/demo_source/border.png') 30 30 stretch;
+            -webkit-border-image: url('https://www.runoob.com/try/demo_source/border.png') 30 30 stretch;
+            -o-border-image: url('https://www.runoob.com/try/demo_source/border.png') 30 30 stretch;
+        }
+
+        /* 背景图 */
+        #example1 {
+            /* 层叠关系，越靠前越在上面显示 */
+            background-image: url('https://www.runoob.com/try/demo_source/img_flwr.gif'), url('https://www.runoob.com/try/demo_source/paper.gif');
+            background-position: right bottom, left top;
+            background-repeat: no-repeat, repeat;
+            padding: 15px;
+
+            /* background: url(img_flwr.gif) right bottom no-repeat, url(paper.gif) left top repeat; */
+
+            /* 规定背景图片的定位区域 */
+            /* background-origin: border-box; */
+            /* 规定背景的绘制区域 */
+            /* background-clip: border-box; */
+            /* 规定背景图片的尺寸 */
+            /* background-size: 80px 50px; */
+
+            /* background ： [background-color] | [background-image] | [background-position][/background-size] | [background-repeat] | [background-attachment] | [background-clip] | [background-origin],... */
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- 图片边框 -->
+    <div>ID不支持border-image属性</div>
+    <div id="round">图片平铺来填充该区域</div>
+    <br>
+    <div id="stretch">图片拉伸来填充该区域</div>
+    <br>
+
+    <!-- 背景图 -->
+    <div id="example1">
+        <h1>Lorem Ipsum Dolor</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+            dolore magna aliquam erat volutpat.</p>
+        <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
+            commodo consequat.</p>
+    </div>
+
+</body>
+
+</html>

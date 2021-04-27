@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        .box1{
+
+            width: 200px;
+            height: 200px;
+            
+            /* 
+            线性渐变
+                语法
+                background-image: linear-gradient(direction, color-stop1, color-stop2, ...);
+                    to right、to bottom right... 渐变方向
+                    45deg 角度
+            */
+            /* background-image: linear-gradient(red, yellow); */
+            /* background-image: linear-gradient(to right, red, yellow); */
+            /* background-image: linear-gradient(45deg, red, yellow); */
+            /* background-image: linear-gradient(to top left, red, yellow); */
+            /* background-image: linear-gradient(to top left, red, yellow, gray); */
+
+            /* 
+                50px 过渡区域开始位置 到70px过渡色 其他为纯色
+            */
+            background-image: linear-gradient(to bottom, red 50px, yellow 70px);
+            
+            /* 
+                平铺渐变 
+            */
+            /* background-image: repeating-linear-gradient(red 50px, yellow 100px); */
+            /* background-image: repeating-radial-gradient(red 50px, yellow 100px); */
+
+            /* 径向渐变，从中心向四周 
+                大小 at 位置，颜色 位置， 颜色 位置.....
+            */
+            /* background-image: radial-gradient(red, yellow); */
+            /* background-image: radial-gradient(50px 50px, red, yellow); */
+            /* background-image: radial-gradient(circle, red, yellow); */
+            /* background-image: radial-gradient(50px 50px at 0px 0px, red, yellow); */
+            /* background-image: radial-gradient(50px 50px at center center, red, yellow); */
+
+        }
+
+    </style>
+    
+
+</head>
+<body>
+
+    <div class="box1"></div>
+    
+</body>
+</html>

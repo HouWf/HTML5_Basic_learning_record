@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 通过link修改样式三，css -->
+    <!-- 外部样式 -->
+    <link rel="stylesheet" href="/CSS_base/style.css">
+
+    <!-- 修改样式二 -->
+    <!-- 内部样式 -->
+    <style >
+        p{
+            color: burlywood;
+            font-size: 20px;
+            background: lightgray;
+            /* 文本缩进 */
+            text-indent: 50px;
+            
+        }
+    </style>
+
+</head>
+<body>
+    <!--  样式优先级一：（内联样式）> （内部样式）>（外部样式）> 浏览器默认样式 -->
+    <!-- 内联样式 > id 选择器 > 类选择器 = 伪类选择器 = 属性选择器 > 标签选择器 = 伪元素选择器 -->
+    <!-- 优先级二：（逐级增加）
+    通用选择器（*）
+    元素(类型)选择器
+    类选择器
+    属性选择器
+    伪类
+    ID 选择器
+    内联样式 -->ø
+    
+    <!-- 结构、表现、行为 -->
+    <!-- 修改样式一： 内联样式（行内样式） -->
+    <p style="color: blue; font-size: 15;">少小离家老大回，乡音无改鬓毛衰</p>
+
+    <p>鹅鹅鹅，曲项向天歌</p>
+
+</body>
+</html>

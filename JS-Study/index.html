@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./index.css">
+
+</head>
+
+<body>
+
+    <h2></h2>
+    <p>这个是手动输入内容</p>
+
+    <img class="img_view" src="../img/pic-2.png" alt="">
+
+    <button>切换用户</button>
+
+    <button type="button" onclick="btnClick()">测试映射</button>
+
+    <br><br>
+
+    <input type="text" class="Nan_Input">
+    <button onclick="checkNanInput()">点击验证输入的内容</button>
+    <div class="div_info">11</div>
+
+    <form action="" name="myForm" onsubmit="return validateForm()" method="post">
+        名字：<input name="fname" type="text" placeholder="请输入姓名">
+        <input type="submit" value="提交">
+    </form>
+
+    <div id="div1">
+        <p id="p1">这是段落一</p>
+        <p id="p2">这是段落二</p>
+    </div>
+
+
+    <script src="./index.js"></script>
+
+    <!-- 给图片增加可以点击的区域 -->
+    <!-- <img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
+    <map name="planetmap">
+        <area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun">
+        <area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury">
+        <area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus">
+    </map> -->
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            height: 2000px;
+        }
+        .box1, .box2, .box3{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+
+        .box1{
+            background-color: #bfa;
+        }
+
+        .box2{
+            /* 
+                相同的都一样，不同：
+                    与固定定位类似，但是会跟着导航条一起滚动，但是滚动到导航条顶部时不会滑动
+                    类似于tab吸顶
+
+                    ----- 兼容性不好 ------
+            */
+            position: sticky;
+            top: 100px;
+            left: 0px;
+        }
+
+        .box3{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+    
+</body>
+</html>

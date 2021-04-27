@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box1{
+            font-size: 50px;
+
+            /* 
+                text-decoration 文本修饰
+                    none 什么都没有
+                    underline 下划线
+                    line-through 删除线
+                    overline 上划线
+             */
+             text-decoration: underline red dotted/*solid*/;
+
+             /* 文字阴影 */
+             /* text-shadow: 5px 5px 5px #ff0000; */
+        }
+
+        .box2{
+            font-size: 20px;
+            width: 200px;
+            /* 
+                white-space: 设置如何处理空白
+                    normal 正常
+                    nowrap 不换行
+                    pre 留白（根据编辑的文字样式展示）
+                overflow: 多余的部分如何显示
+                    scroll 滚动显示
+                    hidden 隐藏
+                    auto 自动（浏览器自动吹了--一般是滚动）
+                    visible 越界展示
+                    inherit 从父元素继承属性
+             */
+            
+            white-space: nowrap;
+            /* 裁剪多余的部分 */
+            overflow: hidden;
+            /* 设置显示省略号 */
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box1">
+        今天天气真不错
+    </div>
+
+    <div class="box2">
+        拉开解放啦数控刀具发上来看对方就爱上了对方就爱上了多发点 
+        af
+        af
+        阿斯蒂芬
+    </div>
+
+    
+    
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table{
+            width: 50%;
+            border: 1px solid black;
+            margin: 0 auto;
+
+            /* 指定边框距离 */
+            /* border-spacing: 0px; */
+
+            /* 设置边框合并 */
+            border-collapse: collapse;
+        }
+
+        td{
+            border: 1px solid black;
+            /* height: 100px; */
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        tr{
+            background-color: lightgray;
+        }
+
+        /* tr:nth-child(2n+1){
+            background-color: #bfa;
+        } */
+
+        tbody tr:nth-child(odd){
+            background-color: #bfa;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <table>
+        <tr>
+            <td>学号</td>
+            <td>姓名</td>
+            <td>性别</td>
+            <td>年龄</td>
+            <td>地址</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>孙悟空</td>
+            <td>男</td>
+            <td>18</td>
+            <td>花果山</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>猪八戒</td>
+            <td>男</td>
+            <td>20</td>
+            <td>高老庄</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>沙和尚</td>
+            <td>男</td>
+            <td>20</td>
+            <td>流沙河</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>唐僧</td>
+            <td>男</td>
+            <td>20</td>
+            <td>女儿国</td>
+        </tr>
+    </table>
+
+</body>
+</html>

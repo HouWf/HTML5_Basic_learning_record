@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /* 附加字体 */
+        @font-face {
+            /* 字体名字 */
+            font-family: "myfont";
+            /* 路径 */
+            src: url("/资料/字体/ZCOOLKuaiLe-Regular.ttf");
+        }
+
+        p{
+            /* 
+                color 字体颜色。前景色
+                font-size 字体大小
+                    em: 当前元素的一个font-size
+                    rem： 相当于跟元素的font-size
+                font-family 字体格式
+                    字体分类
+                        serif:  衬线字体
+                        sans-serif: 非衬线字体
+                        monospace: 等宽字体
+                        ......
+                font-style:字体样式
+                    normal 正常字体
+                    italic 斜体
+                    oblique 与斜体类似，但不太支持
+            */
+            /* 优先自左向右使用，兼容使用 */
+            /* font-family: 'Courier New', Courier, monospace; */
+
+            /* 设置外加字体 */
+            font-family: myfont;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        今天天气不错， Hello hello How are you!
+    </p>
+</body>
+</html>

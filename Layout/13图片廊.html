@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .responsive {
+            float: left;
+            padding-top: 10px;
+            padding-left: 10px;
+
+            /* 默认尺寸25% */
+            width: 24.9999%;
+        }
+
+        div.img {
+            border: 1px solid lightgray;
+
+        }
+
+        div.img:hover {
+            border: 1px solid black;
+        }
+
+        .img>a>img {
+            width: 100%;
+            /* 解决a标签底部有空隙问题 */
+            display: block;
+        }
+
+        .img>.desc {
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* 500-700的时候 尺寸是50% */
+        @media only screen and (max-width: 700px) {
+            .responsive {
+                width: 49.99999%;
+                margin: 6px 0;
+            }
+        }
+
+        /* 0-500的时候 尺寸是500% */
+        @media only screen and (max-width: 500px) {
+            .responsive {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="responsive">
+        <div class="img">
+            <a href="https://static.runoob.com/images/demo/demo1.jpg" target="_blank">
+                <img src="https://static.runoob.com/images/demo/demo1.jpg" alt="demo1">
+            </a>
+            <div class="desc">图片描述一</div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="img">
+            <a href="https://static.runoob.com/images/demo/demo2.jpg" target="_blank">
+                <img src="https://static.runoob.com/images/demo/demo2.jpg" alt="demo1">
+            </a>
+            <div class="desc">图片描述二</div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="img">
+            <a href="https://static.runoob.com/images/demo/demo1.jpg" target="_blank">
+                <img src="https://static.runoob.com/images/demo/demo1.jpg" alt="demo1">
+            </a>
+            <div class="desc">图片描述三</div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="img">
+            <a href="https://static.runoob.com/images/demo/demo1.jpg" target="_blank">
+                <img src="https://static.runoob.com/images/demo/demo1.jpg" alt="demo1">
+            </a>
+            <div class="desc">图片描述四</div>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+</body>
+
+</html>

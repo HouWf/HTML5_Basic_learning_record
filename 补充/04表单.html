@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    /* 输入框带占位图 */
+    input[type=text] {
+        width: 150px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        background-color: white;
+        background-image: url('https://static.runoob.com/images/mix/searchicon.png');
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        padding: 12px 20px 12px 40px;
+    }
+
+    input[type=text]:focus {
+        width: 100%;
+    }
+
+    /* 响应式布局 layout - 在屏幕宽度小于 600px 时， 设置为上下堆叠元素 */
+    @media screen and (max-width: 600px) {
+        input[type=submit], input[type=reset] {
+            width: 100%;
+            margin-top: 0;
+        }
+
+        input[type=reset] {
+            margin-top: 5px;
+        }
+    }
+</style>
+
+<body>
+
+    <form action="target.html">
+        用户名:
+        <input type="text" name="name">
+        <br>
+        密码:
+        <input type="password" name="password" id="321">
+        <br>
+
+        单选框
+        <input type="radio" name="hello" value="0">
+        <input type="radio" name="hello" value="1">
+        <input type="radio" name="hello" value="2" checked>
+        <br>
+
+        多选框
+        <input type="checkbox" name="box1" id="">
+        <input type="checkbox" name="box1" id="">
+        <br>
+
+        下拉
+        <select name="select" id="1">
+            <option value="op1">选项一</option>
+            <option value="op2">选项二</option>
+            <option value="op3">选项三</option>
+            <option value="op3" selected>选项三</option>
+
+            <!-- <optgroup label="Swedish Cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+            </optgroup>
+            <optgroup label="German Cars">
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+            </optgroup> -->
+        </select>
+
+
+        <br>
+
+        <input type="submit" value="按钮名称" name="data" id="123">
+        <br>
+        <!-- <button></button> -->
+    </form>
+    <br>
+    <form action="">
+        <!-- <fieldset> 标签可以将表单内的相关元素分组。
+             <fieldset> 标签会在相关表单元素周围绘制边框。
+                 <legend> 标签为 <fieldset> 元素定义标题。
+        -->
+        <fieldset disabled>
+            <legend>带边框的表单</legend>
+            Name: <input type="text" size="30"><br>
+            E-mail: <input type="text" size="30"><br>
+            Date of birth: <input type="text" size="10">
+        </fieldset>
+    </form>
+    <br>
+    <!-- 发送邮件 -->
+    <form action="MAILTO:someone@example.com" method="post" enctype="text/plain">
+        Name:<br>
+        <input type="text" name="name" value="your name"><br>
+        E-mail:<br>
+        <input type="text" name="mail" value="your email"><br>
+        Comment:<br>
+        <input type="text" name="comment" value="your comment" size="50"><br><br>
+        <input type="image" src="../img/pic-4-input-type.png" alt="input支持的类型" style="width: 400px; ">
+        <br><br>
+        <input type="submit" value="发送">
+        <input type="reset" value="重置">
+    </form>
+    <br><br>
+
+    <!-- <datalist> 标签规定了 <input> 元素可能的选项列表。 -->
+    <div>建议框</div>
+    <form action="demo-form.php" method="get">
+        <input list="browsers" name="browser">
+        <datalist id="browsers">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+        <input type="submit">
+    </form>
+    <br><br>
+
+    <!-- 完成后自动填充 autocomplete
+        required 必填
+        autofocus 自动聚焦
+
+    -->
+    <div>完成后自动填充</div>
+    <form action="./realTable.html" autocomplete="on">
+        First name:<input type="text" name="fname" placeholder="first name" required autofocus><br>
+        Last name: <input type="text" name="lname"><br>
+        E-mail: <input type="email" name="email" autocomplete="off"><br>
+        <input type="submit">
+    </form>
+    <br><br>
+
+    <!-- 输入区域 -->
+    <textarea name="input_textarea" id="in_area" cols="30" rows="10" placeholder="请输入内容"></textarea>
+    <br><br>
+
+    <!-- 
+          pattern 校验的正则表达式
+       -->
+    Country code: <input type="text" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code">
+</body>
+
+</html>

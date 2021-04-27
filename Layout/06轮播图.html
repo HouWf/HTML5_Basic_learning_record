@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .img-list {
+            width: 500px;
+            height: 470px;
+            margin: 100px auto;
+
+            /* 开启相对定位，使ul中的pointer可以相对于url定位，而不是body */
+            position: relative;
+        }
+
+
+        .img-list li {
+            position: absolute;
+        }
+
+        /* 改变元素层级来显示指定的图片 */
+        .img-list li:nth-child(4) {
+            z-index: 1;
+        }
+
+        /* 设置导航点的样式 */
+        .pointer {
+            position: absolute;
+            z-index: 9999;
+        }
+
+        .pointer a {
+            /* 设置向左浮动 横向排列 */
+            float: left;
+
+            width: 10px;
+            height: 10px;
+            margin-left: 2px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.6);
+
+            bottom: 20px;
+            left: 40px;
+
+            /* 将背景颜色设置到内容区，边框和内边距不再有背景颜色 */
+            background-clip: content-box;
+            /* 设置透明色 */
+            border: 2px solid transparent;
+        }
+
+        .pointer a.active,
+        .pointer a:hover{
+            background-color: #fff;
+            border: 2px solid rgba(255, 255, 255, 0,3);
+        }
+
+        .pointer a .active{
+            background-color: #fff;
+            border: 2px solid rgba(255, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="img-list">
+        <!-- 需要添加图片 -->
+        <li><a href="#"><img src="" alt="">/a>/li>
+        <li><a href="#"><img src="" alt="">/a>/li>
+        <li><a href="#"><img src="" alt="">/a>/li>
+        <li><a href="#"><img src="" alt="">/a>/li>
+        <li><a href="#"><img src="" alt="">/a>/li>
+        <li><a href="#"><img src="" alt="">/a>/li>
+        <li><a href="#"><img src="" alt="">/a>/li>
+        <li><a href="#"><img src="" alt="">/a>/li>
+
+        <div class="pointer">
+            <a href="#" class="active"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+        </div>
+    </ul>
+
+
+
+</body>
+
+</html>

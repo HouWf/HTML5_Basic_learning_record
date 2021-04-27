@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 2D转换 */
+        .twoD {
+            width: 200px;
+            height: 100px;
+            background-color: yellow;
+        }
+
+        /* Rotate */
+        .firstStyle {
+            /* 顺时针旋转30度 */
+            transform: rotate(30deg);
+
+            -ms-transform: rotate(30deg);
+            /* IE 9 */
+
+            -webkit-transform: rotate(30deg);
+            /* Safari and Chrome */
+
+            /* transition-duration: 2s; */
+        }
+
+        /* move */
+        .firstStyle-move {
+            /* 左边元素移动50个像素，并从顶部移动50像素。 */
+            transform: translate(50px, 50px);
+            /* -ms-transform: translate(); */
+            /* -webkit-transform: translate(); */
+
+            /* transform: translateX();
+            transform: translateY(); */
+        }
+
+        /* scale */
+        .firstStyle-scale {
+            /* 宽*1.5 高*1.2 */
+            transform: scale(1.5, 1.2);
+        }
+
+        /* skew */
+        .firstStyle-skew {
+            /* 分别表示X轴和Y轴倾斜的角度，如果第二个参数为空，则默认为0，参数为负表示向相反方向倾斜 */
+            transform: skew(30deg, 20deg);
+        }
+
+        /* 3D转换 */
+        .threeD {
+            width: 200px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .rotateX {
+            transform: rotateX(180deg);
+            -webkit-transform: rotateX(180deg);
+            -ms-transform: rotateX(180deg);
+
+            transform: rotateY(180deg);
+            -webkit-transform: rotateY(180deg);
+            -ms-transform: rotateY(180deg);
+        }
+
+        /* 
+        perspective: number|none;
+        设置从何处查看一个元素的角度
+            number  元素距离视图的距离，以像素计。
+            none    默认值。与 0 相同。不设置透视。
+        */
+        .div1 {
+            height: 150px;
+            width: 150px;
+            margin: 50px;
+            padding: 10px;
+            border: 1px solid black;
+            /* 设置观看角度 */
+            perspective: 150;
+            -webkit-perspective: 180;
+        }
+
+        .rotateX-2 {
+            padding: 50px;
+            border: 1px solid black;
+            background-color: red;
+            transform: rotateX(45deg);
+            -webkit-transform: rotateX(45deg);
+        }
+
+        /* 过度动画 */
+        .duration-first {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+
+            /* 设置过度动画，宽度变化执行2s */
+            /* transition-property: width;
+            transition-duration: 2s; */
+            /* 简写方式 */
+            /* transition: width 2s;
+            -webkit-transition: width 2s; */
+
+            /* 多项改变 */
+            /* transition: width 2s, height 2s, transform 2s;
+            -webkit-transition: width 2s, height 2s, -webkit-transform 2s; */
+
+            /* 过度时间线
+                linear: 相同的速度 （等于 cubic-bezier(0,0,1,1)）
+                ease: 慢--快--慢 （cubic-bezier(0.25,0.1,0.25,1)）。
+                ease-in: 以慢速开始的过渡效果（等于 cubic-bezier(0.42,0,1,1)）。
+                ease-out: 以慢速结束的过渡效果（等于 cubic-bezier(0,0,0.58,1)）。
+                ease-in-out: 以慢速开始和结束的过渡效果（等于 cubic-bezier(0.42,0,0.58,1)
+                cubic-bezier(n,n,n,n) 函数中定义自己的值。可能的值是 0 至 1 之间的数值。值越大越慢
+            */
+            /* transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+
+            /* 延迟开始 */
+            /* transition-delay: 2s;
+            -webkit-transition-delay: 2s; */
+
+            /* 最终简写效果 
+                宽度变更 1秒的变更过程 时间过渡线 延迟
+            */
+            transition: width 1s linear 2s;
+            -webkit-transition: width 1s linear 2s;
+        }
+
+        .duration-first:hover {
+            width: 300px;
+            /* 高度未设置时间，会瞬间变化 */
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="twoD firstStyle" style="margin-top: 100px; ">角度旋转</div>
+    <div class="twoD firstStyle-move">位置移动</div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="twoD firstStyle-scale" style="margin-left: 50px;">大小缩放</div>
+
+    <div class="twoD firstStyle-skew" style="margin-left: 50px;">倾斜</div>
+
+    <!-- 3D -->
+    <div class="threeD rotateX" style="text-align: center; line-height: 100px;">进行x,y轴旋转</div>
+
+    <div class="div1">
+        <div class="rotateX-2" style="text-align: center;">设置观看角度</div>
+    </div>
+    <br>
+
+    <!-- 过度动画 -->
+    <div class="duration-first">hover时进行过渡动画</div>
+</body>
+
+</html>

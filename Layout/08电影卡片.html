@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="/Font/fontawesome/css/all.css">
+
+    <style>
+
+        .outer{
+            width: 240px;
+            margin: 100px auto;
+
+            box-shadow: 0 0 10px lightgray ;
+        }
+
+        .img-wrapper img{
+            width: 100%;
+            vertical-align: bottom;
+        }
+
+        .info{
+            padding: 0 18px;
+            color: #acaaaa;
+            font-size: 14px;
+        }
+
+        .info .title{
+            color: #717171;
+            font-size: 18px;
+            margin: 13px 0 15px 0;
+        }        
+
+        /* .info .category{
+            color: #acaaaa;
+            font-size: 14px;
+        } */
+
+        .info .category i{
+            margin-right: 7px;
+            margin-left: 4px;
+        }
+
+        .info .intro{
+            /* color: #acaaaa;
+            font-size: 14px; */
+            margin: 18px 4px;
+            line-height: 20px;
+        }
+
+        .star-wrapper{
+            height: 46px;
+            line-height: 46px;
+            border-top: 1px solid #e9e9e9;
+
+            color: #ddd;
+            padding: 0 16px;
+        }
+
+        .star-wrapper .star{
+            float: left;
+        }
+
+        .star-wrapper .light{
+            color: #b9cb41;
+        }
+
+        .star-wrapper .weibo{
+            float: right;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!-- 外层容器 -->
+    <div class="outer">
+        <!-- 图片容器 -->
+        <div class="img-wrapper">
+            <img src="../img/pic-3.png" alt="">
+        </div>
+
+        <!-- 内容容器 -->
+        <div class="info">
+            <h2 class="title">
+                Animation films
+            </h2>
+            <h3 class="category">
+                <i class="fas fa-map-marker-alt"></i>
+                animation
+            </h3>
+            <p class="intro">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque recusandae praesentium quas vero tempora. Doloribus nobis
+            </p>
+
+        </div>
+
+        <!-- 评分容器 -->
+        <div class="star-wrapper">
+            <ul class="star">
+                <li class="fas fa-star light"></li>
+                <li class="fas fa-star light"></li>
+                <li class="fas fa-star"></li>
+                <li class="fas fa-star"></li>
+            </ul>
+
+            <!-- <span class="fab fa-weixin"></span> -->
+            <ul class="weibo">
+                <li class="fab fa-weixin"></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

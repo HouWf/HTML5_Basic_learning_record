@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 
+            关系元素
+            div的子元素span，不包含孙子元素
+        */
+        div > span {
+            color: orange;
+        }
+
+        /* 
+            关系元素
+            div的下的所有元素span，包含孙子元素
+        */
+        div span {
+            color: orange;
+        }
+
+        /* 关系+复合选择器 */
+        div>span.fix {
+            color: seagreen;
+        }
+
+        /* 祖先 */
+        div>p>span {
+            color: red;
+        }
+
+        /* 紧挨着p的下一个元素 */
+        p+span {
+            font-size: 30px;
+        }
+
+        /* p向下找所有的span兄弟元素 */
+        p~span {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        父元素
+        子元素
+        祖先元素
+        后代元素
+        兄弟元素
+     -->
+    <div>
+        我是div
+        <p>
+            我是div中的p元素
+            <br>
+            <span>我是p中的span元素</span>
+        </p>
+        <span>p标签的紧挨着的下一个span</span>
+        <br>
+        <span>我是div中的span元素</span>
+        <br>
+        <span class="fix">这个是混合使用</span>
+    </div>
+
+    <div>
+        <p>段落 1。 在 div 中。</p>
+        <p>段落 2。 在 div 中。</p>
+        <aside>
+            <p>123</p>
+        </aside>
+    </div>
+
+</body>
+
+</html>

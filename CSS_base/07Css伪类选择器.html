@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /* 
+            伪类，不存在或者讲是特殊的类
+            描述元素的特殊状态
+            比如：第一个元素、被点击的元素、鼠标移入的元素
+            不考虑同类型
+            :first-child 第一个
+            :last-child 最后一个
+            :nth-child(n) 选中第n个元素 2n 2n+1等
+            :nth-last-child(n) 选择倒数第N个元素
+
+            :first-of-type(n) 同类型第一个
+            :last-of-type(n) 同类最后一个
+            :nth-of-type(n) 同类第n个
+            :nth-last-of-type(n) 同类中倒数第N个
+
+            :not(p) 否定伪类 将符合条件的元素从选择器中去除
+
+            p:only-of-type 选择所有仅有一个子元素为p的元素
+            <div><p>This is a paragraph.</p></div>
+
+            :checked 选择器匹配每个选中的输入元素（仅适用于单选按钮或复选框 input type='radio' 或type='checkbox'）。
+            :disabled 不可用
+            :enabled 可用
+            :empty 空值
+            :in-range 指定范围内的值（input min='1' max='10'）
+            :invalid 所有无效的元素
+
+            
+
+        */
+        ul > li:first-child{
+            color: red;
+        }
+
+        ul > li:first-of-type{
+            color: purple;
+        }
+
+        ul > li:nth-child(2n+1){
+            color: royalblue;
+        }
+
+        ul > li:not(2){
+            color: royalblue;
+        }
+
+    </style>
+</head>
+<body>
+
+    <ul>
+        <span>这是ul中的第一个，是span，child=0</span>
+        <li>第一个</li>
+        <li>第二个</li>
+        <li>第三个</li>
+        <li>第四个</li>
+        <li>第五个</li>
+    </ul>
+    
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 演示一 */
+        .dropdown {
+            padding: 10px;
+            min-width: 160px;
+        }
+
+        .dropdown>p {
+            border: 1px solid lightgray;
+            padding: 10px;
+            display: inline;
+        }
+
+        .drop-down-content {
+            display: none;
+            /* position: relative; */
+            background-color: lightgray;
+            box-shadow: 2px 2px 10px lightgreen;
+            width: 25%;
+        }
+
+        .dropdown:hover .drop-down-content {
+            display: block;
+        }
+
+        /* 演示二 */
+        /* dorpdown_list 类使用 position:relative, 这将设置下拉菜单的内容放置在下拉按钮 (使用 position:absolute) 的右下角位置。 */
+        .dorpdown_list {
+            padding: 10px;
+            /* 实际上移除这两行也没什么影响 */
+            position: relative;
+            display: inline-block;
+        }
+
+        .dorpbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dorpdown_list_content {
+            background-color: white;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            display: none;
+            min-width: 120px;
+        }
+
+        .dorpdown_list_content a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            padding: 12px 16px;
+        }
+
+        .dorpdown_list_content a:hover {
+            background-color: lightgray;
+        }
+
+        .dorpdown_list:hover .dorpbtn {
+            background-color: #3e8e41;
+        }
+
+        .dorpdown_list:hover .dorpdown_list_content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="dropdown">
+        <p>鼠标移动到这里</p>
+        <div class="drop-down-content">
+            <p><strong>这是标题</strong></p>
+            <p>这是内容段落</p>
+        </div>
+    </div>
+
+
+    <div class="dorpdown_list">
+        <button class="dorpbtn">下来菜单</button>
+        <div class="dorpdown_list_content">
+            <a href="#">第一个链接</a>
+            <a href="#">第二个链接</a>
+            <a href="#">第三个链接</a>
+            <a href="#">第四个链接</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

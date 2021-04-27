@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 
+            float ：
+            特性
+            元素的水平方向浮动，意味着元素只能左右移动而不能上下移动。
+            一个浮动元素会尽量向左或向右移动，直到它的外边缘碰到包含框或另一个浮动框的边框为止。
+            
+            效果
+            浮动元素之后的元素将围绕它；
+            浮动元素之前的元素将不会受到影响；
+
+            彼此相邻的元素效果
+            如果你把几个浮动的元素放到一起，如果有空间的话，它们将彼此相邻。
+
+        */
+        .flot-view{
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-right: 10px;
+            /* margin-top: 20px;
+            margin-left: 30px; */
+        }
+
+        /* .text-view{
+            margin-left: 10px;
+        } */
+
+        section{
+            border: 1px solid red;
+            width: 100%;
+            float: left;
+        }
+
+        .newdiv{
+            margin: 5px;
+            width: 50px;
+            height: 150px;
+        }
+
+        .left{
+            float: left;
+            background-color: rosybrown;
+        }
+
+        .right{
+            float: right;
+            background-color: sandybrown;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="flot-view"></div>
+    <div class="text-view">奥拉夫交啊蓝山咖啡静安寺；立刻就发了；上看荆防颗粒；氨基酸的罚款了；时代峰峻阿里；上课的风景阿卡丽；圣诞节发来；收快递费结案率；收快递费静安寺；离开飞机啊；了上萨克解放啦会计师费狄拉克世纪东方；拉开始减肥；拉斯柯达积分；按理说会计法；老实交代发受得了；进口法兰设计费拉斯加快递费；阿拉斯加发来；是激发了房间爱时分秒村民小组；
+        可见奥拉夫交啊蓝山咖啡静安寺；立刻就发了；上看荆防颗粒；氨基酸的罚款了；时代峰峻阿里；上课的风景阿卡丽；圣诞节发来；收快递费结案率；收快递费静安寺；离开飞机啊；了上萨克解放啦会计师费狄拉克世纪东方；拉开始减肥；拉斯柯达积分；按理说会计法；老实交代发受得了；进口法兰设计费拉斯加快递费；阿拉斯加发来；是激发了房间爱时分秒村民小组；可见
+        奥拉夫交啊蓝山咖啡静安寺；立刻就发了；上看荆防颗粒；氨基酸的罚款了；时代峰峻阿里；上课的风景阿卡丽；圣诞节发来；收快递费结案率；收快递费静安寺；离开飞机啊；了上萨克解放啦会计师费狄拉克世纪东方；拉开始减肥；拉斯柯达积分；按理说会计法；老实交代发受得了；进口法兰设计费拉斯加快递费；阿拉斯加发来；是激发了房间爱时分秒村民小组；可见</div>
+
+    <br><br>
+
+    <section>
+        <div class="left newdiv">1</div>
+        <div class="left newdiv">2</div>
+        <div class="right newdiv">3</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ducimus eos impedit asperiores, cum magnam, reprehenderit neque sequi, nostrum odit quasi iure beatae facere quisquam suscipit accusantium dolores tenetur. Quis!</p>
+
+    </section>
+</body>
+</html>

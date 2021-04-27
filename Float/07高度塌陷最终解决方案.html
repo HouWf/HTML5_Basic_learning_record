@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        .box1{
+            border: 10px red solid;
+        }
+
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: #bfa;
+            float: left;
+
+        }
+
+        /* 
+            元素浮动之后，周围的元素会重新排列，为了避免这种情况，使用 clear 属性。
+            clear 属性指定元素两侧不能出现浮动元素。
+        */
+        /* 通过clear开启BFC
+            类似于cell中的bottom.mas_offset()
+        */
+        /* .box3{
+            clear: both;
+        } */
+
+        /* 通过伪元素开启BFC */
+        .box1::after{
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="box1">
+        <div class="box2"></div>
+        <!-- <div class="box3">123</div> -->
+    </div>
+
+</body>
+</html>

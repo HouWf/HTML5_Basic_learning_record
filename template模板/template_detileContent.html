@@ -1,0 +1,25 @@
+
+<!-- 第一步创建一个div -->
+<div class="detileContent"></div>
+
+<!-- <script id="tpl"> -->
+
+    <div class="delectimg">
+        <img src="{{true_name}}" alt="">
+    </div>
+
+    <div class="newpr">
+        <div class="detle_r">
+            <div class="list_z">
+                <p class="zhao" style="font-size: 3rem;">{{true_name}}<span>{{position}}</span></p>
+                <div class="star">
+                    <!-- 好评 -->
+                    <%for(var i = 0; i<star_num ; i++){%>
+                        <img src="./img//detile/xxl.png" {{$value}} alt="">
+                    <%}%>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- </script> -->

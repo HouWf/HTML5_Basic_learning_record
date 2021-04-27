@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="demo"></div>
+
+    <script>
+
+        var ages = [32, 33, 16, 40];
+        function checkAdult(age) {
+            return age > 18;
+        }
+
+        var demoDiv = document.getElementsByClassName('demo')[0];
+        /**
+         * every检查所有元素是否满足指定条件（通过函数提供）
+         * 例：
+         * 检测数组 ages 的所有元素是否都大于等于 18 
+         * */ 
+        demoDiv.innerHTML = ages.every(checkAdult);
+        /**
+         * filter检查指定数组中符合条件的所有元素
+         * 例：
+         * 返回大于18岁的元素
+         * */ 
+        console.log(ages.filter(checkAdult));
+        /**
+         * find() 方法返回通过测试（函数内判断）的数组的第一个元素的值。
+         * */ 
+        console.log(ages.find(checkAdult));
+        /**
+         * findIndex() 条件（函数）符合条件的数组第一个元素位置。
+         * */ 
+         console.log(ages.find(checkAdult));
+
+    </script>
+
+</body>
+
+</html>

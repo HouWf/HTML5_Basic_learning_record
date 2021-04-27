@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 
+        h-shadow   v-shadow   blur   spread   color   insect
+        水平阴影    垂直阴影     模糊    阴影尺寸  颜色     外阴影转到内阴影 
+        */
+        #boxshadow {
+            position: relative;
+            -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+            -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+            box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+            padding: 10px;
+            background: white;
+        }
+
+        /* Make the image fit the box */
+        #boxshadow img {
+            width: 100%;
+            border: 1px solid #8a4419;
+            border-style: inset;
+        }
+
+        #boxshadow::after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            /* hide shadow behind image */
+            -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+            width: 70%;
+            left: 15%;
+            /* one half of the remaining 30% */
+            height: 100px;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="boxshadow">
+        <img src="https://www.runoob.com/try/demo_source/rock600x400.jpg" alt="Norway" width="600" height="400">
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .color-change {
+            width: 100px;
+            height: 100px;
+            background-color: lightgray;
+            border: 1px solid rgba(0, 0, 0, 0.7);
+
+            /* style 3 */
+            position: relative;
+            animation: colorChange 4s;
+            -webkit-animation: colorChange 4s;
+
+            /* 
+                animation-
+                    name: 动画名称  @keyframes name{}
+                    duration: 执行时间
+                    timing-function: 设置动画将如何完成一个周期(过度时间线 类似于2D 3D的贝塞尔)
+                    delay: 延迟
+                    interation-count: 重复次数
+                    direction: 指定是否应该轮流反向播放动画
+                    fill-mode: 规定当动画不播放时（当动画完成时，或当动画有一个延迟未开始播放时），要应用到元素的样式。（forwards 停留在最终位置）
+
+                    animation-play-state: 暂停/执行动画 paused/running
+
+            */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            /* animation-play-state: paused;             */
+
+            /* 所有属性 */
+            /* animation-name: myfirst;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-play-state: running; */
+            /* Safari 与 Chrome: */
+            /* -webkit-animation-name: myfirst;
+            -webkit-animation-duration: 5s;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-delay: 2s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-direction: alternate;
+            -webkit-animation-play-state: running; */
+        }
+
+        /* .color-change:hover {
+            animation: colorChange 4s;
+            -webkit-animation: colorChange 4s;
+        } */
+
+        @keyframes colorChange {
+
+            /* style 1 */
+            /* from {background-color: red;}
+            to {background-color: yellow;} */
+
+            /* style 2 */
+            /* 0% {background: red;}
+            25% {background: yellow;}
+            50% {background: blue;}
+            100% {background: green;} */
+
+            /* style 3 */
+            0% {
+                background: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        @-webkit-keyframes colorChange {
+
+            /* style 1 */
+            /* from {background-color: red;}
+            to {background-color: yellow;} */
+
+            /* style 2 */
+            /* 0% {background: red;}
+            25% {background: yellow;}
+            50% {background: blue;}
+            100% {background: green;} */
+
+            /* style 3 */
+            0% {
+                background: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        /* @media screen (max-width 700px) {
+
+        } */
+    </style>
+</head>
+
+<div class="color-change"></div>
+
+<body>
+
+
+
+</body>
+
+</html>

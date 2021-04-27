@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box1, .box2, .box3{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+
+        }
+
+        .box1{
+            background-color: #bfa;
+        }
+
+        .box2{
+            /* 
+                绝对定位
+                    - position为absolute时开启
+                    - 特点
+                        1.如果不设置偏移量，则位置不会变化
+                        2.会从文档流中脱离，类似于float浮动（下部元素会自动上移）
+                        3.会改变元素性质，行内元素变成块，块的宽高被内容撑开
+                        4.元素会提升一个层级
+                        5.绝对定位元素相对于【包含块（content block）】进行定位。
+
+                    - 包含块
+                        正常情况就是离当前元素最近的祖先元素。
+                        开启绝对定位的情况：离当前元素最近的开启了position的祖先元素
+
+            */
+            position: absolute;
+            top: 50px;
+            left: 20px;
+
+        }
+
+        .box3{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box1">1</div>
+    <!-- <div class="box4">
+        <div class="box5">
+            <div class="box6"></div>
+        </div>
+    </div> -->
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+    
+</body>
+</html>

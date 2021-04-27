@@ -1,0 +1,22 @@
+
+/* 同时解决高度塌陷和外边距重叠问题 */
+.cleafix::before,
+.cleafix::after{
+    display: table;
+    clear: both;
+    content: "";
+}
+
+/* ... 样式 单行 */
+.witebreak{
+    white-space: nowrap;
+    /* 裁剪多余的部分 */
+    overflow: hidden;
+    /* 设置显示省略号 */
+    text-overflow: ellipsis;
+}
+
+body{
+    font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+    color: #333;
+}

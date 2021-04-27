@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 通过属性选中 
+            [属性]
+            [属性=属性值] 指定属性和值
+            [属性^=属性值] 属性值指定开头的元素
+            [属性$=属性值] 属性值指定结尾的元素
+            [属性*=属性值] 属性值含有指定的元素
+            [属性~=属性值] 属性值含有指定的元素
+            [属性|=属性值] 属性值含有指定的元素
+
+            "value 是完整单词" 类型的比较符号: ~=, |=
+            'hello world'
+
+            "拼接字符串" 类型的比较符号: *=, ^=, $=
+            'helloworld'
+
+        */
+        /* 
+            表单中用的比较多
+            input[type=text] {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+ 
+            input[type=submit] {
+                
+            }
+        
+        */
+        [title] {
+            color: rebeccapurple;
+        }
+
+        p[title] {
+            color: orange;
+        }
+
+        p[title="123"] {
+            color: gray;
+        }
+
+        p[title^="a"] {
+            color: greenyellow;
+        }
+
+        p[title$="d"] {
+            color: khaki;
+        }
+
+        p[title*="1"] {
+            color: lightcoral;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p title="鼠标放上去时显示文字">少小离家老大回</p>
+    <p title="123">乡音无改鬓毛衰</p>
+    <p title="abc">儿童相见不相识</p>
+    <p title="abcd">笑问客从何处来</p>
+
+</body>
+
+</html>

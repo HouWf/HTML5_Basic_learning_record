@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航条</title>
+    <link rel="stylesheet" href="reset.css">
+
+    <style>
+        body {
+            height: 2000px;
+        }
+
+        .nav {
+            width: 1210px;
+            height: 48px;
+            background-color: #E8E7E3;
+            margin: 100px auto;
+
+            /* position: sticky;
+            top: 20px; */
+        }
+
+        .nav li {
+            /* 纵向改成横向排列 */
+            float: left;
+            line-height: 48px;
+        }
+
+        .nav a {
+            display: block;
+            text-decoration: none;
+            color: #777;
+            font-size: 18px;
+            padding: 0px 41px;
+            height: 100%;
+        }
+
+        .nav a:hover {
+            background-color: red;
+            color: white;
+        }
+
+        .nav li:last-child a {
+            padding: 0 43px 0 46px;
+        }
+
+        /* 在屏幕宽度小于 600px 会重置导航栏 */
+        @media screen and (max-width: 600px) {
+
+            nav li {
+                float: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="nav">
+        <li>
+            <a href="#">HTML/CSS</a>
+        </li>
+        <li>
+            <a href="#">Browser side</a>
+        </li>
+        <li>
+            <a href="#">Server side</a>
+        </li>
+        <li>
+            <a href="#">Programing</a>
+        </li>
+        <li>
+            <a href="#">XML</a>
+        </li>
+        <li>
+            <a href="#">Web Building</a>
+        </li>
+        <li>
+            <a href="#">Reference</a>
+        </li>
+    </ul>
+
+</body>
+
+</html>

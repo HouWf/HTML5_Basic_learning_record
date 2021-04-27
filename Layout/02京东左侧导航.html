@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京东左侧选择样式</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+
+        body{
+            background: #bfa
+        }
+
+        .left-nav{
+            width: 190px;
+            /* height: 450px; */
+            padding: 10px 0;
+            background-color: white;
+        }
+
+        /* .left-nav > div{
+            background-color: red;
+        } */
+    
+        .left-nav .item{
+            /* background-color: yellow; */
+            height: 25px;
+            /* 文字垂直居中：height == line-height */
+            line-height: 25px;
+
+            padding-left: 18px;
+        }
+
+        .item:hover{
+            background-color: #d9d9d9;
+        }
+
+        .item a{
+            color: #333333;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .item .item-span{
+            padding: 0 2px;
+            font-size: 12px;
+        }
+
+        .item a:hover{
+            color: #c81623;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="left-nav">
+
+        <div class="item">
+            <a href="#">家用电器</a>
+        </div>
+
+        <div class="item">
+            <a href="#">手机</a><span class="item-span">/</span><a href="#">运营商</a><span class="item-span">/</span><a href="#">数码</a>
+        </div class="item">
+
+        <div class="item">
+            <a href="#">电脑</a><span class="item-span">/</span><a href="#">办公</a>
+        </div class="item">
+
+        <div class="item">
+            <a href="#">家具</a><span class="item-span">/</span><a href="#">家居</a><span class="item-span">/</span><a href="#">家装</a><a href="#">厨具</a>
+        </div>
+
+        <div class="item">
+            <a href="#">男装</a><span class="item-span">/</span><a href="#">女装</a><span class="item-span">/</span><a href="#">童装</a>
+        </div>
+
+    </nav>
+    
+</body>
+</html>

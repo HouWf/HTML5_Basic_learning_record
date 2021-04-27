@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 
+            a的伪类，只适用a标签
+            :link 表示没有访问过的链接
+            :visited 访问过的链接,只可更改颜色
+
+            :hover 鼠标移入后的颜色
+            :active 点击时的颜色
+        */
+        a:link{
+            color: salmon;
+        }
+
+        a:visited{
+            color: seagreen;
+        }
+
+        a:hover{
+            font-size: 25px;
+        }
+
+        a:active{
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://www.baidu.com">百度</a>
+    <br><br>
+
+    <a href="http://www.baidu.com">百度1</a>
+    <br><br>
+
+    <a href="http://www.baidu.com" target="_blank">新页签百度</a>
+    
+</body>
+</html>

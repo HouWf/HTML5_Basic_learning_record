@@ -1,0 +1,31 @@
+
+
+p{
+  color: red;
+  font-size: 10px;
+}
+
+a[href^="https"]::before {
+    content: "🔗 ";
+  }
+  
+  a[href^="mailto"]::before {
+    content: "📧 ";
+  }
+  
+  a[href^="tel"]::before {
+    content: "📞 ";
+  }
+
+  li {
+    margin-bottom: .5rem;
+  }
+
+  .clearfix::before, 
+  .clearfix::after{
+      content: "";
+      display: table;
+      clear: both;
+   }
+  
+  

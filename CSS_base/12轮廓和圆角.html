@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: #bfa;
+
+        /* 右10px 下10px 红色 */
+            /* box-shadow: 10px 10px red ; */
+            /* box-shadow: 60px -16px teal; */
+
+        /* 右10px 下10px 模糊半径（越大越模糊） 红色 */
+            /* box-shadow: 10px 5px 5px red; */
+
+        /* ... 1px 边框 */
+            /* box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2); */
+        
+        /* 内部阴影 */
+            /* box-shadow: inset 5em 1em gold; */
+
+        /* 双重阴影 */
+            /* box-shadow: 3px 3px red, -1em 0 .4em olive; */ 
+        }
+
+        .box1:hover{
+            /* border会影响布局，增加元素高度 */
+            /* border: 10px red solid; */
+            
+            /* outline，轮廓线，不会影响布局 */
+            outline: 10px red solid;
+        }
+
+        .box2{
+            width: 200px;
+            height: 200px;
+            margin-top: 20px;
+            background-color: orange;
+            
+            /* 全部设置 */
+            /* border-radius: 100px; */
+
+            /* 对角设置 */
+            border-radius: 10px 20px; 
+
+            /* 分别设置 */
+            /* border-top-left-radius: 10px; */
+            /* border-top-right-radius: 10px; */
+            /* border-bottom-left-radius: 10px; */
+            /* border-bottom-right-radius: 10px; */
+
+            /* box-shadow: 10px 10px 5px red; */
+        }
+
+        a{
+            border: 1px solid;
+            border-radius: 3px;
+            display: inline-block;
+            margin: 10px;
+            padding: 5px;
+            text-decoration: none;
+        }
+
+        a:focus{
+            outline: 4px dotted #e73;
+            outline-offset: 2px;
+            background: #ffa;
+        }
+
+        /* a:active{
+            outline: 4px dotted #e73;
+            outline-offset: 4px;
+            background: #ffa;
+        } */
+
+    </style>
+</head>
+<body>
+
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+    <a href="#">This link has a special focus style.</a>
+
+</body>
+</html>

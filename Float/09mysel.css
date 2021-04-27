@@ -1,0 +1,102 @@
+
+@import "../Layout/reset.css";
+
+.section-1{
+    width: 90%;
+    border: sandybrown 1px solid;
+    margin: 10px;
+}
+
+.section-1 div{
+    width: 50px;
+    height: 100px;
+    background: sandybrown;
+    margin: 5px;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.section-2{
+    width: 90%;
+    border: 1px black solid;
+    padding: 10px;
+    margin: 10px;
+}
+
+.imagewrpper{
+    overflow: hidden;
+    float: left;
+}
+
+.imagewrpper .userpic{
+    height: 70px;
+}
+
+.userinfo{
+    margin: 10px 10px;
+    float: left;
+    margin-top: 0px;
+    height: 70px;
+}
+
+.userinfo .nickname,
+.userinfo .userid{
+    font: 14px 'Courier New', Courier, monospace;
+    margin-left: 5px;
+
+}
+
+.userinfo .nickname{
+    margin-top: 15px;
+}
+
+.userinfo .userid{
+    margin-top: 10px;
+}
+
+.introduce{
+    float: left;
+    font: 14px/1.33 'Courier New', Courier, monospace;
+    line-height: 16px;
+    padding: 5px;
+    /* margin-bottom: -10px; */
+}
+
+.bottom{
+    float: left;
+    height: 20px;
+    /* padding: 5px; */
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.bottom .fas{
+    /* vertical-align: middle; */
+    margin: auto 2px auto 10px;
+}
+
+.bottom .fas:first-child{
+    margin-left: 5px;
+}
+
+.fas:active{
+    color: purple;
+}
+
+.fas:hover{
+    color: red;
+}
+
+

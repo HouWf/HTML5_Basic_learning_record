@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="reset.css">
+
+    <style>
+        body{
+            background-color: #dfa;
+        }
+        
+        a{
+            text-decoration: none;
+        }
+        
+        .news-wrapper{
+            width: 280px;
+            /* height: 357px; */
+            margin: 50px auto;
+            border-top: 1px solid #ddd;
+            background-color: white;
+            padding-bottom: 5px;
+        }
+
+        .new-title{
+            display: inline-block;
+            height: 40px;
+            border-top: solid red 1px;
+            margin-top: -1px;
+            line-height: 40px;
+
+        }
+
+        .new-title a{
+            color: #40406B;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .news-img{
+            height: 200px;
+            background-color: lightgray;
+        }
+
+        .news-img .img-title{
+            margin-top: -30px;
+            color: #ffffff;
+            font-weight: bold;
+            padding-left: 30px;
+        }
+
+        .news-list{
+            margin-top: 20px;
+        }
+
+        .news-list li{
+            margin-bottom: 17px;
+        }
+        
+        .news-list li::before{
+            content: "●";
+            color: rgb(218, 218, 218);
+            font-size: 12px;
+            margin-right: 4px;
+        }
+
+        .news-list li:hover{
+            background-color: seagreen;
+        }
+
+        .news-list li a{
+            font-size: 14px;
+            color: #666;
+        }
+
+        .news-list li a:hover{
+            color: red;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <div class="news-wrapper">
+        <h2 class="new-title">
+            <a href="#" class="">体育</a>
+        </h2>
+
+        <div class="news-img">
+            <a href="#">
+                <img src="https://t12.baidu.com/it/u1=1740908393&u2=2907021075&fm=76" alt="当前热门体育">
+                <h3 class="img-title">
+                    这是标题
+                </h3>
+            </a>
+        </div>
+
+        <ul class="news-list">
+            <li>
+                <a href="#">新闻标题1</a>
+            </li>
+            <li>
+                <a href="#">新闻标题2</a>
+            </li>
+            <li>
+                <a href="#">新闻标题3</a>
+            </li>
+            <li>
+                <a href="#">新闻标题4</a>
+            </li>
+        </ul>
+
+    </div>
+    
+</body>
+</html>

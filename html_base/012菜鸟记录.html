@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 关键字 -->
+    <meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript">
+    <!-- 网页描述 -->
+    <meta name="description" content="免费 Web & 编程 教程">
+    <!-- 作者 -->
+    <meta name="author" content="Runoob">
+    <!-- 每30秒钟刷新当前页面 -->
+    <meta http-equiv="refresh" content="30">
+
+    <!-- 顶部logo -->
+    <link rel="shortcut icon" href="图片url">
+    <!-- 顶部标题 -->
+    <title>Document</title>
+
+    <style>
+        .item {
+            border: 1px solid #aaaaaa;
+            width: 350px;
+            height: 70px;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- 创建带有可供点击区域的图像地图。其中的每个区域都是一个超级链接。
+    <map> 标签用于客户端图像映射。图像映射指带有可点击区域的一幅图像。
+
+    <img>中的 usemap 属性可引用 <map> 中的 id 或 name 属性（取决于浏览器），所以我们应同时向 <map> 添加 id 和 name 属性。
+
+    area 元素永远嵌套在 map 元素内部。area 元素可定义图像映射中的区域。
+    -->
+    <img src="https://www.runoob.com/try/demo_source/planets.gif" width="145" height="126" alt="Planets"
+        usemap="#planetmap">
+    <map name="planetmap">
+        <area shape="rect" coords="0,0,82,126" alt="Sun" href="https://www.runoob.com/try/demo_source/sun.htm">
+        <area shape="circle" coords="90,58,3" alt="Mercury" href="https://www.runoob.com/try/demo_source/mercur.htm">
+        <area shape="circle" coords="124,58,8" alt="Venus" href="https://www.runoob.com/try/demo_source/venus.htm">
+
+        <!-- 多边形：(各顶点坐标依次为(x1,y1)、(x2,y2)、(x3,y3) ......) -->
+        <!-- <area shape="poly" coords="x1,y1,x2,y2 ......" href=url> -->
+    </map>
+    <br><br>
+
+    <!-- 创建可拖拽的视图 -->
+    <div class="item" ondrop="imgDropOnItem(event)" ondragover="imgDragoverItem(event)"></div>
+    <br>
+    <div class="item" ondrop="imgDropOnItem(event)" ondragover="imgDragoverItem(event)"></div>
+    <br>
+    <img id="drag1" src="../img/logo.png" alt="菜鸟logo" draggable="true"  ondragstart="imgStartDrage(event)" style="width: 336;">
+
+
+    <!-- 插入背景图片 -->
+    <!-- <body background="../img/pic-3.png"></body> -->
+
+
+
+    <script src="https://api.map.baidu.com/api?v=2.0&ak=7a6QKaIilZftIMmKGAFLG7QT1GLfIncg"></script>
+    <script src="./012菜鸟记录.js"></script>
+</body>
+
+</html>

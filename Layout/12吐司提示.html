@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            padding: 50px 0px 10px 10px;
+            /* text-align: center; */
+            margin-left: 200px;
+        }
+
+        .tooltip {
+            border-bottom: 1px dotted lightgray;
+
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltiptext {
+            background-color: black;
+            border-radius: 5px;
+            color: #fff;
+            width: 120px;
+            text-align: center;
+            padding: 5px 0px;
+
+            visibility: hidden;
+            z-index: 1;
+            position: absolute;
+            /* 上 */
+            /* bottom: 120%;
+            left: 50%;
+            margin-left: -60px; */
+
+            /* 左 */
+            /* right: 110%;
+            bottom: -5px; */
+
+            /* 下 */
+            /* top: 130%;
+            left: 50%;
+            margin-left: -60px;  */
+
+            /* 左 */
+            left: 110%;
+            bottom: -5px;
+
+            /* 淡入 - 1秒内从 0% 到 100% 显示: */
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            /* 动画 */
+            opacity: 1;
+        }
+
+        .tooltiptext::after {
+            content: '';
+            position: absolute;
+            border-width: 5px;
+            border-style: solid;
+            /* 上 */
+            /* top: 100%;
+            left: 50%;
+            margin-left: -5px; 
+            border-color: black transparent transparent transparent; */
+
+
+            /* 左 */
+            /* left: 100%;
+            margin-top: 5px;
+            border-color: transparent transparent transparent black; */
+
+            /* 下 */
+            /* bottom: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-color: black transparent;
+            border-color: transparent transparent black transparent; */
+
+            /* 右 */
+            right: 100%;
+            margin-top: 5px;
+            border-color: transparent black transparent transparent;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div>这是顶部占位文字</div>
+    <div class="tooltip">鼠标移动到这里来
+        <span class="tooltiptext">提示文本</span>
+    </div>
+    <div>这是底部占位文字</div>
+
+</body>
+
+</html>

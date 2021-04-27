@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .red{
+            color: green;
+        }
+
+        /* 
+            交集选择器，选中同时符合多个选择器的元素
+            是div，且有red选择器
+            如果有元素选择器时，必须使用元素选择器开头
+        */
+        div.red{
+            font-size: 20px;
+        }
+
+        .red.a.b.c{
+            color: purple;
+        }
+
+        /* 
+            选择器分组，并集选择器“,”分割
+        */
+        h1,span{
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="red">我是div</div>
+
+    <p class="red a b c">我是n元素</p>
+
+    <h1>标题</h1>
+
+    <span>这是span</span>
+
+    
+</body>
+</html>

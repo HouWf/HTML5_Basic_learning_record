@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+
+    <style>
+        p::before{
+            content: "\e625";
+            font-family: "iconfont";
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- 
+        图标+文字
+
+        fontawesome使用步骤
+            1.下载https://fontawesome.com/
+            2.解压
+            3.将css和webfonts移动到项目中
+            4.将css引入到网页中
+            5.只用图标字体
+                -直接通过类名要使用图标字体
+                    class="fas fa-bell"
+     -->
+
+     <!-- 固定fas 字体样式 -->
+     <i class="fas fa-bell" style="font-size: 20px; color: salmon;">132</i>
+
+     <!-- iconfont 
+        引入方式相同
+     -->
+     <i class="iconfont xxxx"></i>
+     <i class="iconfont">&#xe61c;</i>
+     <p>hello</p>
+</body>
+</html>

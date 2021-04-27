@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="target.html">
+
+        <input type="text" name="username" placeholder="请输入用户名" value="昵称123" id="">
+        <br><br>
+        <input type="color">
+        <br><br>
+        <input type="email" name="email" id="">
+        <br><br>
+
+        <div>input类型按钮</div>
+        <input type="submit" name="提交" id="">
+        <input type="reset" name="重置" id="">
+        <input type="button" name="按钮" value="按钮" id="">
+        <br><br>
+
+        <div>button类型按钮</div>
+        <button type="submit">提交</button>
+        <button type="reset">重置</button>
+        <button type="button">按钮</button>
+
+        <!-- autocomplete自动补全 -->
+        <input type="text" name="username" placeholder="不自动补全" value="昵称123" id="" autocomplete="off">
+        <!-- readonly只读 -->
+        <input type="text" name="username" placeholder="只读" id="" readonly>
+        <!-- disabled禁用 -->
+        <input type="text" name="username" placeholder="禁用" id="" disabled>
+        <!-- autofocus自动获取焦点 -->
+        <input type="text" name="username" placeholder="禁用" id="" autofocus>
+
+    </form>
+    
+</body>
+</html>

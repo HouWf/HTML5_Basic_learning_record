@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        div{font-size: 50px;}
+
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            float: left;
+        }
+
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            /* 
+                如果不希望某个元素因为其他元素的浮动而产生的影响，
+                可以设置clear清除浮动元素对当前元素产生的影响
+
+                clear:
+                    - 作用：清除浮动元素对当前元素产生的影响
+                    - 可选项
+                        left 清除左侧的影响
+                        right 清除右侧的影响
+                        both 清除两侧中最大影响的一侧
+                    - 原理
+                        设置clear后浏览器会自动为元素添加一个外边距，以使其位置不受其他元素影响
+            */
+            clear: left;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box1">1</div>
+    <!-- <div class="box2">2</div> -->
+    <div class="box3">3</div>
+    
+</body>
+</html>

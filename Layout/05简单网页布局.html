@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <link rel="stylesheet" href="reset.css"> -->
+
+    <style>
+
+        header, main, footer{
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        header{
+            background-color: silver;
+            height: 150px;
+        }
+
+        main{
+            background-color: #dfa;
+            /* height: 400px; */
+            margin: 10px auto;
+        }
+
+        /* 
+            开启BFC 使用内容高度撑起main高度
+            table 可以同时解决高度塌陷和外边距重叠问题
+            block 只能解决高度塌陷
+        */
+        /* main::after{
+            content: "";
+            display: table;
+            clear: both;
+        } */
+  
+        .left-nav, .center-view, .right-nav{
+            float: left;
+            /* height: 400px; */
+        }
+
+        main .left-nav{
+            height: 400px;
+            width: 200px;
+            background-color: yellow;
+        }
+
+        main .center-view{
+            width: 580px;
+            background-color: orange;
+            margin: 0 10px;
+        }
+
+        main .right-nav{
+            height: 400px;
+            width: 200px;
+            background-color: purple;
+        }
+
+        /* topview,bottomview 内容撑起main-center, main-center通过高度塌陷和BFC进行高度自适应*/
+        .center-view-top, .center-view-bottom{
+            width: 100%;
+        }
+
+        .center-view-top{
+            height: 195px;
+            background-color: red;
+        }
+
+        .center-view-bottom{
+            height: 250px;
+            background-color: gray;
+            margin-top: 10px;
+        }
+
+        footer{
+            background-color: tomato;
+            height: 120px;
+        }
+
+        /* 开启BFC 使用内容高度撑起main高度 */
+        .clearfix::before, 
+        .clearfix::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <header></header>
+
+    <main class="clearfix">
+        <div class="left-nav"></div>
+        <div class="center-view">
+            <div class="center-view-top"></div>
+            <div class="center-view-bottom"></div>
+        </div>
+        <div class="right-nav"></div>
+    </main>
+
+    <footer></footer>
+    
+</body>
+</html>

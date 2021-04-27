@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+
+    <style>
+
+        .foter{
+            float: left;
+            background-color: yellow;
+            padding: 15px
+        }
+
+        .top_nav{
+            background-color: #777;
+            overflow: hidden;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .foter{
+            float: left;
+            background-color: yellow;
+            width: 100%;
+        }
+        .top_nav li{
+            float: left;
+        }
+
+        .top_nav li a{
+            display: inline-block;
+            color: white;
+            text-align: center;
+            font-size: 16px;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+        .top_nav li a:hover{
+            background-color: #222;
+        }
+
+        .top_nav li a.active{
+            background-color: #4CAF50;
+        }
+
+        .sidemenu, .content{
+            padding: 10px;
+            float: left;
+        }
+
+        .sidemenu ul li a{
+            background-color: #eee;
+            text-decoration: none;
+            color: #666;
+            display: block;
+            margin-bottom: 4px;
+            padding: 8px;
+        }
+
+        .sidemenu ul li a:hover{
+            background-color: #555;
+            color: white;
+        }
+
+        .sidemenu ul li a.active{
+            background-color: #008CBA;
+            color: white;
+        }
+
+        .content{
+            padding: 10px;
+            max-width: 83.5%;
+        }
+
+        .header{
+            background-color: turquoise;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        
+
+    </style>
+</head>
+
+<body>
+
+    <ul class="top_nav">
+        <li><a href="#home" class="active">主页</a></li>
+        <li><a href="#news">新闻</a></li>
+        <li><a href="#contact">联系我们</a></li>
+        <li><a href="#about">关于我们</a></li>
+    </ul>
+
+    <div class="sidemenu">
+        <ul>
+            <li><a href="#flight" class="active">The Flight</a></li>
+            <li><a href="#City">The City</a></li>
+            <li><a href="#Island">The Island</a></li>
+            <li><a href="#Food">The Food</a></li>
+            <li><a href="#People">The People</a></li>
+            <li><a href="#History">The History</a></li>
+            <li><a href="#Oceans">The Oceans</a></li>
+        </ul>
+
+    </div>
+
+    <div class="content clearfix">
+        <div class="header">
+            <h1>The city</h1>
+        </div>
+        <h1>Chania</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis alias itaque distinctio praesentium, modi
+            quasi ab dicta quidem minus. Deleniti aspernatur itaque nesciunt asperiores esse voluptatibus totam cum sit
+            ab.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque tempore quidem necessitatibus suscipit.
+            Ab, et. Recusandae omnis animi placeat, voluptates quo deserunt corporis repudiandae illo nam? Voluptate
+            alias omnis ratione.</p>
+    </div>
+
+    <div class="foter">
+        <p>底部文本</p>
+    </div>
+
+    <script>
+        var topNav = document.getElementsByClassName('top_nav')[0];
+        var topNavLi = topNav.getElementsByTagName('li');
+        var currentTopIndex = 0;
+
+        for (let index = 0; index < topNavLi.length; index++) {
+            const element = topNavLi[index];
+            var a = topNavLi[index].getElementsByTagName('a')[0];
+            a.onclick = function (){
+                changeTopMenuIted(index);
+            } 
+        }
+
+        function changeTopMenuIted(index){
+            if (currentTopIndex == index) {
+                return;
+            }
+            for (let liIndex = 0; liIndex < topNavLi.length; liIndex++) {
+                const element = topNavLi[liIndex];
+                var cura = element.getElementsByTagName('a')[0];
+                if (cura.className.match('active')) {
+                    var newClassName = cura.className.replace('active', ' ');
+                    cura.className = newClassName;
+                }
+            }
+
+            var a = topNavLi[index].getElementsByTagName('a')[0];
+            var acurrentName = a.className;
+            acurrentName += "active";
+            a.className = acurrentName;
+
+            currentTopIndex = index;
+        }
+
+    </script>
+
+</body>
+
+</html>
